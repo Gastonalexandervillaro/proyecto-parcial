@@ -1,0 +1,12 @@
+.container {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+
+}
+.ima {
+
+    width: 350px;
+    margin: 0 10px;
+}

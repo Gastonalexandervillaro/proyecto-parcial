@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestros productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="carrusel.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="assets/logo.jpeg" class="logo">
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
+                </li>
+                
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://wa.me/5492615436225">Contactanos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Cerrar Sesion</a>
+              </li>
+    
+            </ul>
+            <form class="d-flex" role="search">
+                <input type="text" id="search-input" placeholder="Buscar por descripción..." oninput="filterImages()">
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+        <!-- Contenedor para mostrar los resultados del buscador-->
+        <div id="results-container"></div>
+        <div class="centrar">
+          <div class="contenido">
+              <h1 id="carousel-title">Nuestros Productos</h1>
+              <div id="carousel" class="carousel">
+                  <button id="prev" onclick="changeImage(-1)">Anterior</button>
+                  <img id="carousel-image" src="" alt="Imagen del producto">
+                  <button id="next" onclick="changeImage(1)">Siguiente</button>
+              </div>
+              <div id="carousel-description" class="description">Descripción del producto</div>
+          </div>
+      
+
+          <section id="logo-whatsapp">
+            <a href="https://wa.me/5492615436225" target="_blank">
+                <img src="assets/logo-whatsapp2.png" alt="WhatsApp">
+            </a>
+        </section>
+
+
+    </div>
+
+    <!-- PIE DE PAGINA - SIMILAR A HEADER-->
+    
+    <footer>
+        <section id="contenido-footer">
+            <div class="info-contacto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M8 3C8.5 3 10.5 7.5 10.5 8C10.5 9 9 10 8.5 11C8 12 9 13 10 14C10.3943 14.3943 12 16 13 15.5C14 15 15 13.5 16 13.5C16.5 13.5 21 15.5 21 16C21 18 19.5 19.5 18 20C16.5 20.5 15.5 20.5 13.5 20C11.5 19.5 10 19 7.5 16.5C5 14 4.5 12.5 4 10.5C3.5 8.5 3.5 7.5 4 6C4.5 4.5 6 3 8 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/><animateTransform attributeName="transform" begin="0.6s;lineMdPhoneCallLoop0.begin+2.6s" dur="0.5s" type="rotate" values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12"/></path><path stroke-dasharray="4" stroke-dashoffset="4" d="M14 7.04404C14.6608 7.34734 15.2571 7.76718 15.7624 8.27723M16.956 10C16.6606 9.35636 16.2546 8.77401 15.7624 8.27723" opacity="0"><set id="lineMdPhoneCallLoop0" attributeName="opacity" begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" to="1"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s;lineMdPhoneCallLoop0.begin+2.7s" dur="0.2s" values="4;8"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="1.3s;lineMdPhoneCallLoop0.begin+3.3s" dur="0.3s" values="0;4"/><set attributeName="opacity" begin="1.6s;lineMdPhoneCallLoop0.begin+3.6s" to="0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M20.748 9C20.3874 7.59926 19.6571 6.347 18.6672 5.3535M15 3.25203C16.4105 3.61507 17.6704 4.3531 18.6672 5.3535" opacity="0"><set attributeName="opacity" begin="1s;lineMdPhoneCallLoop0.begin+3s" to="1"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="1s;lineMdPhoneCallLoop0.begin+3s" dur="0.2s" values="10;20"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="1.5s;lineMdPhoneCallLoop0.begin+3.5s" dur="0.3s" values="0;10"/><set attributeName="opacity" begin="1.8s;lineMdPhoneCallLoop0.begin+3.8s" to="0"/></path></g></svg>
+                <p><b>Teléfono:</b> </p>
+                <p>+549 261 429 1853</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="-5 -2 24 24"><path fill="currentColor" d="M12 7A5 5 0 1 0 2 7c0 1.726 1.66 5.031 5 9.653c3.34-4.622 5-7.927 5-9.653M7 20Q0 10.865 0 7a7 7 0 1 1 14 0q0 3.865-7 13m0-9a4 4 0 1 1 0-8a4 4 0 0 1 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/></svg>
+                <p><b>Encontranos en:</b></p>
+                <p>Av. Jose Vicente Zapata 303, Mendoza</p>
+            
+                
+                <div id="redes-sociales">
+                    <h3>Seguinos en las redes</h3>
+                    <div id="logo-instagram">
+                        <a href="https://www.instagram.com/farmatotalmza/" target="_blank">
+                            <img src="assets/logo-instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+  
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

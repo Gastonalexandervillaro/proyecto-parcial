@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    
 
     body {
         font-family: sans-serif;
@@ -13,17 +14,63 @@
 
     }
 
+    #logo {
+        max-height: 80px; /* Asegura que el logo no sea demasiado grande */
+    }
 
-    header {
-        background-color: #161d2b;
-        height: 145px;
+    #results-container {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /* Centrar horizontalmente los elementos */
+        gap: 20px; /* Espacio entre los elementos */
+        margin-top: 20px;
+      }
+      
+      /* Estilo para cada resultado */
+      .result-item {
         display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar imagen y descripción */
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        width: 150px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .result-item img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+      
+      .result-item p {
+        margin-top: 8px;
+        font-size: 0.9em;
+      }
+
+
+header {
+    background-color: #161d2b;
+    height: 145px;
+    display: flex;
+    display: flex;
     justify-content: space-between;
     box-shadow: 2px 2px 5px black;
 }
 
-    
+.centrar{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura de la ventana */
+}    
+
+.contenido {
+    display: flex;
+    flex-direction: column; /* Organizar en columnas (verticalmente) */
+    align-items: center; /* Centrar los elementos dentro del contenedor .contenido */
+  }
 
 
     /* // <uniquifier>: Use a unique and descriptive class name
@@ -147,13 +194,10 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
 
-
-
     main {
         margin-top: 25px;
         margin-bottom: 25px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 
     }
 
@@ -161,6 +205,10 @@
     .logo {
         height: 145px;
         width: 300px;
+    }
+
+    .cuadro{
+        display: inline;
     }
     @media (min-width:320px) and (max-width:1050px){
 
@@ -238,9 +286,6 @@
         margin-left: auto;
     }
 
-
-
-
 .footer {
     background-color: black;
     padding: 80px 0;
@@ -276,17 +321,12 @@
     display: block;
     margin-bottom: 15px;
     transition: all .3s ease;
-
-
 }
 
 @media(min-width:320px) and (max-width:1050px){
     .letras{
         position: relative;
         left: -30px;
-
-
-
     }
 }
 
@@ -314,17 +354,12 @@
     {
         position: relative;
         left: 30px;
-
-
-
     }
 }
 
 
 .social-link a:hover {
     background-color: #00c3ff;
-
-
     .h21,
     .h22,
     .h23 {
@@ -333,16 +368,8 @@
 
     .rehab {
         display: flex;
-
-        
-        
-
-
-        
+       
     }
-
-
-
 
 
     .logo {
@@ -359,4 +386,124 @@
         color: #333;
     }
 
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+/* Estilo del logo de WhatsApp */
+#logo-whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 40px;
+    width: 80px; /* Tamaño reducido */
+    height: 80px;
+    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+#logo-whatsapp img {
+    width: 200%;
+    height: 200%;
+    object-fit: contain;
+    border-radius: 50%; /* Para que el logo sea redondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
+}
+
+.volver{
+    float: right;
+}
+
+#logo-instagram {
+    width: 80px; /* Ancho del contenedor */
+    height: 80px; /* Alto igual al ancho para hacerlo cuadrado */
+    overflow: hidden; /* Oculta cualquier parte que se salga del contenedor */
+    border-radius: 50%; /* Hace el contenedor redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Fondo blanco para asegurar que el área transparente se vea bien */
+}
+
+#logo-instagram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor, manteniendo las proporciones */
+    border-radius: 50%; /* Asegura que la imagen también sea redonda */
+}
+
+
+
+/* Ajustes para los tabs de sucursales */
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabs button {
+    flex: 1; /* Hace que los botones se ajusten a diferentes tamaños de pantalla */
+    margin: 5px; /* Espacio alrededor de cada botón */
+}
+
+.tabcontent iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+#contenido-footer {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.info-contacto p {
+    margin: 0.5rem 0;
+}
+
+#redes-sociales {
+    margin-top: 1rem;
+}
+
+#logo-instagram {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 0 auto; /* Centra el logo de Instagram */
+}
+
+#logo-instagram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.opciones button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
